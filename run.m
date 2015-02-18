@@ -1,7 +1,8 @@
-function bestMatchingFrame = run(imgFilename) %#codegen
+function relativePosition = run(imgFilename) %#codegen
 
-queryDescriptors = dsift(imgFilename);
-[encodedQuery] = encodeHA(queryDescriptors);
+queryDescriptors  = dsift(imgFilename);
+encodedQuery      = encodeHA(queryDescriptors);
 bestMatchingFrame = matchAgainstDB(encodedQuery);
+relativePosition  = getPositionFromFrame(bestMatchingFrame);
 
 end
