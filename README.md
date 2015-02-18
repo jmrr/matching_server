@@ -18,3 +18,6 @@ On a shell, run
 
 sh matching_server.sh
 ```
+**Notes:**
+
+For now, the query image must be overwritten in the server with the name *test.jpg*
