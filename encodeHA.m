@@ -17,10 +17,6 @@ VWords = single(VWords);
 
 VWords = VWords./repmat(sqrt(sum(VWords.^2,1))+eps,[sizeDescriptors,1]);
 
-% Allocate memory for the encoded pass. Size will be numFrames x numWords
-
-encodedQuery = zeros(numWords,'single');
-
 % Normalise current frame descriptors
 queryDescriptors = single(queryDescriptors') ./ ...
     repmat(sqrt(sum(queryDescriptors'.^2,1))+eps,[sizeDescriptors,1]);
