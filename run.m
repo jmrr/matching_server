@@ -1,6 +1,7 @@
-function bestMatchingFrames = run(queryFrame) %#codegen
+function bestMatchingFrame = run(imgFilename) %#codegen
 
-[paramsDataset, paramsQuery] = setup();
-bestMatchingFrames = getBestMatchingFrames(paramsDataset, paramsQuery, queryFrame);
+queryDescriptors = dsift(imgFilename);
+[encodedQuery] = encodeHA(queryDescriptors);
+bestMatchingFrame = matchAgainstDB(encodedQuery);
 
 end
