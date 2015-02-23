@@ -5,7 +5,7 @@
 
 # Run MATLAB headless and close it afterwards
 
-matlab -nojvm -nodisplay -nosplash -r "matchingServer('test.jpg'), exit"
+matlab -nojvm -nodisplay -nosplash -r "matchingServer('place.jpg'), exit"
 
 
 

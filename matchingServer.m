@@ -72,12 +72,12 @@ kernel = stackQ'*stackDb;
 
 gt = csvread('ground_truth_C2_P5.csv',1,1);
 
-relativePosition = gt(bestMatchingFrame)/gt(end);
+relativePosition = gt(bestMatchingFrame)/gt(end)
 
-%% WRITE OUTPUT
+%% WRITE OUTPUT (uncomment if need to write to a file)
 
-fid = fopen('out','a');
-fprintf(fid,'%f\n',relativePosition);
-fclose(fid);
+%fid = fopen('out','a');
+%fprintf(fid,'%f\n',relativePosition);
+%fclose(fid);
 
 end
